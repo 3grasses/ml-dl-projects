@@ -1,6 +1,6 @@
 # Machine Learning/Deep Learning Projects
 
-This is a collections of the machine learning/deep learning projects I had done during my studies for the Master of Data Science at the University of Sydney. The tools used to build the models includes Keras and PyTorch.
+This repository is a collection of the machine learning and deep learning projects I had completed during my studies for the Master of Data Science at the University of Sydney. The tools used to build the models includes Keras and PyTorch.
 
 - **Fashion-MNIST Image Classification**
 - **Time Series Forecasting for Customer Price Index (CPI)**
