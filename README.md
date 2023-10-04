@@ -1,6 +1,7 @@
 # Machine Learning/Deep Learning Projects
 
-This repository is a collection of the machine learning and deep learning projects I had completed during my studies for Master of Data Science at the University of Sydney. Data used in some of these projects are not provided due to the non-disclosure agreement, but I still provid the code and ideas/reasoning I used to solve theses problems in case someone has similar problems and would like to have an example for reference.
+This repository is a collection of the machine learning and deep learning projects I had completed during my studies for Master of Data Science at the University of Sydney. Data used in some of these projects are not provided due to the non-disclosure agreement, but the code and ideas/reasoning I used to solve these problems are still provided for someone who has similar problems and would like to have an example for reference.
+
 
 The domains that these projects involved include:
 
@@ -54,25 +55,27 @@ This project constructed a predictive model to forecast the Customer Price Index
  <em> Reconstructed images </em>
 </p>
 
-In this project, two Non-negative Matrix Factorization (NMF) algorithms, **$L_2$-norm based NMF and $L_{2, 1}$-norm based NMF**, were implemented to reconstruct face images. The datasets used for training are ORL [[2]](#2) and Extended YaleB dataset [[3]](#3). In addition, to test the robustness of the proposed algorithms, two different types of noise, random additional noise and block-occlusion noises, were added to the images to simulate data corruption. The performance of the algorithms was evaluated and compared in terms of various metrics, including relative rconstruction error, average accuracy, and normalized mutual information (NMI). Definition of each of these metrics can be found in the corresponding code file.
+In this project, two Non-negative Matrix Factorization (NMF) algorithms, **$L_2$-norm based NMF and $L_{2, 1}$-norm based NMF** [[2]](#2), were implemented to reconstruct face images. The datasets used for training are ORL [[3]](#3) and Extended YaleB dataset [[4]](#4). In addition, to test the robustness of the proposed algorithms, two different types of noise, random additional noise and block-occlusion noises, were added to the images to simulate data corruption. The performance of the algorithms was evaluated and compared in terms of various metrics, including relative rconstruction error, average accuracy, and normalized mutual information (NMI). Definition of each of these metrics can be found in the corresponding code file.
 
-Our result shows that both NMF algorithms can reproduce the images successfully but fail to fix the noise pattern. Overall, $L_2$-norm NMF has slightly better performance regardless of the metrics used, while $L_{2, 1}$-norm based NMF is more robust when block-occlusion noise was applied. However, the computational time of the $L_{2, 1}$-norm NMF is significantly longer than $L_2$-norm NMF.
+The result shows that both NMF algorithms performed well on image reconstruction except for fixing the noise pattern. Overall, $L_2$-norm NMF has slightly better performance regardless of the metrics used, while $L_{2, 1}$-norm based NMF is more robust when block-occlusion noise was applied. However, the computational time of the $L_{2, 1}$-norm NMF is significantly longer than $L_2$-norm NMF.
 
 
 ## Label-noise Learning with Transition Matrix for Image Classification
 
 *Collaborator: Ke Wang, Zijie Zhao*
 
-The goal of this project is to construct a model robust to label noise for image classification tasks, i.e., the classifier can still perform well even when there are some of the examples mislabelled. Three corrupted datasets with various flip rate of class-conditional label noise were used. The flip rate of the first two datasets were known, but the one for the last dataset was not. To solve this problem, transition matrix estimator was used. The transition matrix was estimated by two different methods, which are anchor point assumption and dual-T estimator [5], and the estimated results were compared for their robustness.
+This project aims to consturct a image classifier under label noise. Three corrupted datasets with various flip rate of class-conditional label noise were used. The flip rate of the first two datasets were known, but the one for the last dataset was not. Hence, two methods, which are anchor point assumption and dual-T estimator [[5]](#5), were applied to estimate the transition matrix between correct and noisy labels. The robustness of the two estimation methods were evaluate and compared by mean squared error by apply them to the known transtion matrics in the first two datasets. Three neural models, including FFNN, CNN, and ResNet, were then trained to handle classification tasks by applying known or estimated transition matirx. 
+
+The result shows that both methods could reach a high accuracy on transition matrix estimation. However, the model perforamnce decreses as the flip rate increases or the complexity of the images increases, e.g., transefer from gray scale to color scale images.
 
 ## Reference
 
-<a id="1">[1]</a> Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms. Han Xiao, Kashif Rasul, Roland Vollgraf. arXiv:1708.07747
+<a id="1">[1]</a> Han Xiao, Kashif Rasul, Roland Vollgraf. Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms. arXiv:1708.07747, 2017.
 
-<a id="2">[2]</a> ORL
+<a id="2">[2]</a> Deguang Kong, Chris Ding, and Heng Huang. Robust nonnegative matrix factorization using L21-norm. *In Proceedings of the 20th ACM international conference on Information and knowledge management*, pages 673-682, 2011.
 
-<a id="3">[3]</a> Extended YaleB dataset.
+<a id="3">[3]</a> ATT Laboratories Cambridge. The database of faces. https://cam-orl.co.uk/facedatabase.html
 
-[4] Deguang Kong, Chris Ding, and Heng Huang. Robust nonnegative matrix factorization using L21-norm. *In Proceedings of the 20th ACM international conference on Information and knowledge management*, pages 673–682, 2011.
+<a id="4">[4]</a> UCSD Computer Vision. Extended yale face database b. https://paperswithcode.com/dataset/extended-yale-b-1 
 
-[5] Yu Yao, Tongliang Liu, Bo Han, Mingming Gong, Jiankang Deng, Gang Niu, and Masashi Sugiyama. Dual T: Reducing estimation error for transition matrix in label-noise learning. *Advances in neural information processing systems*, 33:7260–7271, 2020.
+<a id="5">[5]</a> Yu Yao, Tongliang Liu, Bo Han, Mingming Gong, Jiankang Deng, Gang Niu, and Masashi Sugiyama. Dual T: Reducing estimation error for transition matrix in label-noise learning. *Advances in neural information processing systems*, 33:7260-7271, 2020.
