@@ -9,7 +9,7 @@ The domains that these projects involved include:
 - **Image reconstruction with non-negative matrix factorization**
 - **Label-noise learning with transition matrix for image classification**
 
-All of the code were provided in `.ipynb` file, and the tools used to build the models are mostly scikit-learn, Keras, and PyTorch.
+All of them were presented in `.ipynb` file, and the tools used for model construction are mostly scikit-learn, Keras, and PyTorch.
 
 
 ## Fashion-MNIST Image Classification
@@ -54,9 +54,10 @@ This project constructed a predictive model to forecast the Customer Price Index
  <em> Reconstructed images </em>
 </p>
 
-In this project, two Non-negative Matrix Factorization (NMF) algorithms, **$L_2$-norm based NMF and $L_{2, 1}$-norm based NMF**, were implemented to reconstruct face images. The image datasets used are ORL [[2]](#2) and Extended YaleB dataset [[3]](#3). In addition, to test the robustness of the proposed algorithms, two different types of noise, random additional noise and block-occlusion noises, were added to the images to simulate possible corruption of data. There are three metrics used to evaluate the performance of the algorithms: relative rconstruction error, average accuracy, and normalized mutual information (NMI). More infromation of the definition of each of these metrics can be found in the corresponding code file.
+In this project, two Non-negative Matrix Factorization (NMF) algorithms, **$L_2$-norm based NMF and $L_{2, 1}$-norm based NMF**, were implemented to reconstruct face images. The datasets used for training are ORL [[2]](#2) and Extended YaleB dataset [[3]](#3). In addition, to test the robustness of the proposed algorithms, two different types of noise, random additional noise and block-occlusion noises, were added to the images to simulate data corruption. The performance of the algorithms was evaluated and compared in terms of various metrics, including relative rconstruction error, average accuracy, and normalized mutual information (NMI). Definition of each of these metrics can be found in the corresponding code file.
 
-The final result indicates that $L_{2, 1}$-norm based NMF has a better robustness on average due to the way it defines the loss function.
+Our result shows that both NMF algorithms can reproduce the images successfully but fail to fix the noise pattern. Overall, $L_2$-norm NMF has slightly better performance regardless of the metrics used, while $L_{2, 1}$-norm based NMF is more robust when block-occlusion noise was applied. However, the computational time of the $L_{2, 1}$-norm NMF is significantly longer than $L_2$-norm NMF.
+
 
 ## Label-noise Learning with Transition Matrix for Image Classification
 
