@@ -17,7 +17,7 @@ All the code were written and presented in `.ipynb` file, and the tools I used t
 <br>
 
 <p align="center">
- <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/e9fc5bfb-d5b1-4cf5-8a53-121e684f7a39" width="700">
+ <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/215a58fd-e7b9-4599-a100-cadbc3b1e6ab" width="700">
  <br>
  <em> Fashion-MNIST dataset </em>
 </p>
@@ -32,7 +32,7 @@ Image classification is one of the main branches in computer vision. In this pro
 <br>
 
 <p align="center">
- <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/95a13176-838e-44e8-93c0-08aead0b47ab" width="650">
+ <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/a53a0955-6421-446f-b6fd-654bb650bb92" width="650">
  <br>
  <em> Forecasting result </em>
 </p>
@@ -47,7 +47,7 @@ This project constructed a predictive model to forecast the Customer Price Index
 <br>
 
 <p align="center">
- <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/0ce68668-0ffc-41b2-a386-d09efda88334" width="400">
+ <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/3b615b44-20d7-41d7-ab69-63d379d2703d" width="400">
   <br>
  <em> Reconstructed images </em>
 </p>
