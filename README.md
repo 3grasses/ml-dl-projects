@@ -1,16 +1,13 @@
 # Machine Learning/Deep Learning Projects
 
-This repository is a collection of the machine learning and deep learning projects I had completed during my studies for Master of Data Science at the University of Sydney. Data used in some of these projects are not provided due to the non-disclosure agreement, but the code and ideas/reasoning I used to solve these problems are still provided for someone who has similar problems and would like to have an example for reference.
-
-
-The domains that these projects involved include:
+This repository is a collection of the machine learning and deep learning projects I had completed during my studies for Master of Data Science at the University of Sydney. Domains that these projects involved include:
 
 - **Fashion-MNIST image classification**
 - **Time series forecasting for customer price index (CPI)**
 - **Image reconstruction with non-negative matrix factorization**
 - **Label-noise learning with transition matrix for image classification**
 
-All of them were presented in `.ipynb` file, and the tools used for model construction are mostly scikit-learn, Keras, and PyTorch.
+All the code were written and presented in `.ipynb` file, and the tools I used to build the models are mostly Keras and PyTorch.
 
 
 ## Fashion-MNIST Image Classification
@@ -25,9 +22,7 @@ All of them were presented in `.ipynb` file, and the tools used for model constr
  <em> Fashion-MNIST dataset </em>
 </p>
 
-Image classification is one of the main branches in computer vision. In this project, three different models, including **random forest, feed-forward neural network (FFNN), and convolutional neural network (CNN)**, were built to classify the Fashion-MNIST dataset [[1]](#1). A step-by-step procedure for data preprocessing, hyperparameter tuning, model training and evaluation were presented with brief explanation. The runtime of the training and evaluation process for each model was also recorded for comparison.
-
-The result shows that the highest accuracy is 90.72% achieved by CNN. However, the runtime is almost 4.5 times longer than FFNN, which shows a trade-off between the accuracy and training efficiency in this case.
+Image classification is one of the main branches in computer vision. In this project, three different models, including **random forest, feed-forward neural network (FFNN), and convolutional neural network (CNN)**, were built to classify the Fashion-MNIST dataset [[1]](#1). A step-by-step procedure for data preprocessing, hyperparameter tuning, model training and evaluation were presented with brief explanation. The accuracy anf the runtime of the training and evaluation process for each model was also recorded for comparison.
 
 
 ## Time Series Forecasting for Customer Price Index (CPI)
@@ -40,7 +35,7 @@ The result shows that the highest accuracy is 90.72% achieved by CNN. However, t
  <em> Forecasting result </em>
 </p>
 
-This project constructed a predictive model to forecast the Customer Price Index (CPI) based on historical data. Forecasting methods examined in this project include **time series decomposition, linear regression, exponential smoothing, and ARIMA.** Long short-term memory (LSTM) network was also considered due to the sequential nature of time series data. ***Parameters were also selected and fine-tuned based on the characteristics presented in the data, such as the appearance of trend, seasonality, and its frequency.*** The final model was constructed by combining the forecasts of exponential smoothing and ARIMA in order to reach a balance between accuracy and stability.
+This project constructed a predictive model to forecast the Customer Price Index (CPI) based on the historical data. Methods examined in this project include **time series decomposition, linear regression, exponential smoothing, and ARIMA.** Long short-term memory (LSTM) network was also considered due to the sequential nature of time series data. All the parameters were selected and fine-tuned based on the characteristics presented in the data, such as the appearance of trend component, seasonality, and its frequency. The final model was determined by considering both the accuracy in terms of the mean square error, mean absolute percentage error, and AIC, as well as the stability of the forecast.
 
 
 ## Image Reconstruction with Non-negative Matrix Factorization
@@ -57,16 +52,13 @@ This project constructed a predictive model to forecast the Customer Price Index
 
 In this project, two Non-negative Matrix Factorization (NMF) algorithms, **$L_2$-norm based NMF and $L_{2, 1}$-norm based NMF** [[2]](#2), were implemented to reconstruct face images. The datasets used for training are ORL [[3]](#3) and Extended YaleB dataset [[4]](#4). In addition, to test the robustness of the proposed algorithms, two different types of noise, random additional noise and block-occlusion noises, were added to the images to simulate data corruption. The performance of the algorithms was evaluated and compared in terms of various metrics, including relative rconstruction error, average accuracy, and normalized mutual information (NMI). Definition of each of these metrics can be found in the corresponding code file.
 
-The result shows that both NMF algorithms performed well on image reconstruction except for fixing the noise pattern. Overall, $L_2$-norm NMF has slightly better performance regardless of the metrics used, while $L_{2, 1}$-norm based NMF is more robust when block-occlusion noise was applied. However, the computational time of the $L_{2, 1}$-norm NMF is significantly longer than $L_2$-norm NMF.
-
 
 ## Label-noise Learning with Transition Matrix for Image Classification
 
 *Collaborator: Ke Wang, Zijie Zhao*
 
-This project aims to consturct a image classifier under label noise. Three corrupted datasets with various flip rate of class-conditional label noise were used. The flip rate of the first two datasets were known, but the one for the last dataset was not. Hence, two methods, which are anchor point assumption and dual-T estimator [[5]](#5), were applied to estimate the transition matrix between correct and noisy labels. The robustness of the two estimation methods were evaluate and compared by mean squared error by apply them to the known transtion matrics in the first two datasets. Three neural models, including FFNN, CNN, and ResNet, were then trained to handle classification tasks by applying known or estimated transition matirx. 
+This project aims to consturct models robust to the appearance of label noise for image classification task. Three corrupted datasets with various flip rates of class-conditional label noise were used. The flip rate of the first two datasets were known, but the one for the last dataset was not. Hence, two methods, which are **anchor point assumption and dual-T estimator** [[5]](#5), were applied to estimate the transition matrix between the correct and noisy labels. The robustness of the two estimation methods were evaluated and compared in terms of mean square error by applying them to the the first two datasets with known matrices, respectively. After that, three neural-based models, including FFNN, CNN, and ResNet, were then trained to perform classification task by utilizing the known or estimated transition matrix to infer the clean class posterior.
 
-The result shows that both methods could reach a high accuracy on transition matrix estimation. However, the model perforamnce decreses as the flip rate increases or the complexity of the images increases, e.g., transefer from gray scale to color scale images.
 
 ## Reference
 
