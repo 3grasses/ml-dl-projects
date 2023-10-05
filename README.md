@@ -17,7 +17,7 @@ All the code were written and presented in `.ipynb` file, and the tools I used t
 <br>
 
 <p align="center">
- <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/e9fc5bfb-d5b1-4cf5-8a53-121e684f7a39" width="7000">
+ <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/e9fc5bfb-d5b1-4cf5-8a53-121e684f7a39" width="700">
  <br>
  <em> Fashion-MNIST dataset </em>
 </p>
@@ -28,6 +28,8 @@ Image classification is one of the main branches in computer vision. In this pro
 ## Time Series Forecasting for Customer Price Index (CPI)
 
 *Collaborator: Yuxuan Mu, Diogo Melo Paes, Rafiul Nakib, William Miao*
+
+<br>
 
 <p align="center">
  <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/95a13176-838e-44e8-93c0-08aead0b47ab" width="650">
