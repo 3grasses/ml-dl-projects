@@ -17,7 +17,7 @@ All the code were written and presented in `.ipynb` file, and the tools I used t
 <br>
 
 <p align="center">
- <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/e9fc5bfb-d5b1-4cf5-8a53-121e684f7a39" width="750">
+ <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/e9fc5bfb-d5b1-4cf5-8a53-121e684f7a39" width="7000">
  <br>
  <em> Fashion-MNIST dataset </em>
 </p>
@@ -30,12 +30,12 @@ Image classification is one of the main branches in computer vision. In this pro
 *Collaborator: Yuxuan Mu, Diogo Melo Paes, Rafiul Nakib, William Miao*
 
 <p align="center">
- <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/95a13176-838e-44e8-93c0-08aead0b47ab" width="700">
+ <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/95a13176-838e-44e8-93c0-08aead0b47ab" width="650">
  <br>
  <em> Forecasting result </em>
 </p>
 
-This project constructed a predictive model to forecast the Customer Price Index (CPI) based on the historical data. Methods examined in this project include **time series decomposition, linear regression, exponential smoothing, and ARIMA.** Long short-term memory (LSTM) network was also considered due to the sequential nature of time series data. All the parameters were selected and fine-tuned based on the characteristics presented in the data, such as the appearance of trend component, seasonality, and its frequency. The final model was determined by considering both the accuracy in terms of the mean square error, mean absolute percentage error, and AIC, as well as the stability of the forecast.
+This project constructed a predictive model to forecast the Customer Price Index (CPI) based on the historical data. Methods examined in this project include **time series decomposition, linear regression, exponential smoothing, and ARIMA.** Long short-term memory (LSTM) network was also considered due to the sequential nature of time series data. All the parameters were selected and fine-tuned based on the characteristics presented in the data, such as the appearance of trend component, seasonality, and its frequency. The final model was determined by considering both the accuracy in terms of mean square error, mean absolute percentage error, and AIC, as well as the stability of the forecast.
 
 
 ## Image Reconstruction with Non-negative Matrix Factorization
@@ -45,7 +45,7 @@ This project constructed a predictive model to forecast the Customer Price Index
 <br>
 
 <p align="center">
- <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/0ce68668-0ffc-41b2-a386-d09efda88334" width="450">
+ <img src="https://github.com/3grasses/ml-dl-projects/assets/146526540/0ce68668-0ffc-41b2-a386-d09efda88334" width="400">
   <br>
  <em> Reconstructed images </em>
 </p>
