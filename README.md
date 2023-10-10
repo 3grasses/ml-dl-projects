@@ -22,7 +22,7 @@ All the code were written and presented in `.ipynb` file, and the tools I used t
  <em> Fashion-MNIST dataset </em>
 </p>
 
-Image classification is one of the main branches in computer vision. In this project, three different models, including **random forest, feed-forward neural network (FFNN), and convolutional neural network (CNN)**, were built to classify the Fashion-MNIST dataset [[1]](#1). A step-by-step procedure for data preprocessing, hyperparameter tuning, model training and evaluation were presented with brief explanation. The accuracy anf the runtime of the training and evaluation process for each model was also recorded for comparison.
+Image classification is one of the main branches in computer vision. In this project, three different models, including **random forest, feed-forward neural network (FFNN), and convolutional neural network (CNN)**, were built to classify the Fashion-MNIST dataset [[1]](#1). A step-by-step procedure for data preprocessing, hyperparameter tuning, model training and evaluation were presented with brief explanation. The accuracy and the runtime of the training and evaluation process for each model was also recorded for comparison.
 
 
 ## Time Series Forecasting for Customer Price Index (CPI)
@@ -52,14 +52,14 @@ This project constructed a predictive model to forecast the Customer Price Index
  <em> Reconstructed images </em>
 </p>
 
-In this project, two Non-negative Matrix Factorization (NMF) algorithms, **$L_2$-norm based NMF and $L_{2, 1}$-norm based NMF** [[2]](#2), were implemented to reconstruct face images. The datasets used for training are ORL [[3]](#3) and Extended YaleB dataset [[4]](#4). In addition, to test the robustness of the proposed algorithms, two different types of noise, random additional noise and block-occlusion noises, were added to the images to simulate data corruption. The performance of the algorithms was evaluated and compared in terms of various metrics, including relative rconstruction error, average accuracy, and normalized mutual information (NMI). Definition of each of these metrics can be found in the corresponding code file.
+In this project, two Non-negative Matrix Factorization (NMF) algorithms, **$L_2$-norm based NMF and $L_{2, 1}$-norm based NMF** [[2]](#2), were implemented to reconstruct face images. The datasets used for training are ORL [[3]](#3) and Extended YaleB dataset [[4]](#4). In addition, to test the robustness of the proposed algorithms, two different types of noise, random additional noise and block-occlusion noises, were added to the images to simulate data corruption. The performance of the algorithms was evaluated and compared in terms of various metrics, including relative reconstruction error, average accuracy, and normalized mutual information (NMI). Definition of each of these metrics can be found in the corresponding code file.
 
 
 ## Label-noise Learning with Transition Matrix for Image Classification
 
 *Collaborator: Ke Wang, Zijie Zhao*
 
-This project aims to consturct models robust to the appearance of label noise for image classification task. Three corrupted datasets with various flip rates of class-conditional label noise were used. The flip rate of the first two datasets were known, but the one for the last dataset was not. Hence, two methods, which are **anchor point assumption and dual-T estimator** [[5]](#5), were applied to estimate the transition matrix between the correct and noisy labels. The robustness of the two estimation methods were evaluated and compared in terms of mean square error by applying them to the the first two datasets with known matrices, respectively. After that, three neural-based models, including FFNN, CNN, and ResNet, were then trained to perform classification task by utilizing the known or estimated transition matrix to infer the clean class posterior.
+This project aims to construct models robust to the appearance of label noise for image classification task. Three corrupted datasets with various flip rates of class-conditional label noise were used. The flip rate of the first two datasets were known, but the one for the last dataset was not. Hence, two methods, which are **anchor point assumption and dual-T estimator** [[5]](#5), were applied to estimate the transition matrix between the correct and noisy labels. The robustness of the two estimation methods were evaluated and compared in terms of mean square error by applying them to the first two datasets with known matrices, respectively. After that, three neural-based models, including FFNN, CNN, and ResNet, were then trained to perform classification task by utilizing the known or estimated transition matrix to infer the clean class posterior.
 
 
 ## Reference
